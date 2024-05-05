@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT FORM</title>
+    <link rel="stylesheet" href="studentform.css">
+</head>
+<body>
+<div class="overall">
+    <h1>STUDENT FORM</h1>
+    <form action="" id="studentform">
+<table>
+    <tr Class="one">
+        <td> <label for="name">Name</label></td>
+        <td><input type="text" name="name" id="name"></td>
+    </tr>
+    <tr class="one">
+        <td><label for="age">Age</label></td>
+        <td><input type="number" name="age" id="age"></td>
+    </tr>
+    <tr class="one">
+        <td><label for="gender">Gender</label></td>
+        <td><select name="gender" id="gender">
+            <option value="select"></option>
+            <Option value="Female">Female</Option>
+            <Option value="male">Male</Option>
+            <Option value="Others">Others</Option>
+        </select></td>
+    </tr>
+    <tr>
+        <td><label for="Date of Birth">Date of Birth</label></td>
+        <td><input type="date" name="dob" id="dob"></td>
+    </tr>
+    <tr class="one">
+        <td>Course</td>
+        <td><input type="text" name="" id="course"></td>
+    </tr>
+    <tr class="one">
+        <td>E-mail</td>
+        <td><input type="email" name="E-mail"  placeholder=" __________@gmail.com"  id="email"></td>
+    </tr>
+</table>
+    <br>
+      <button id="but" type="button" onclick="savedata()">SAVE</button>         
+</form>
+</div>
+<H2>STUDENT DATA</H2>
+ 
+<div class="datas">
+<table id="studentdata">
+    <thead>
+        <tr> 
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>DateofBirth</th>
+            <th>Course</th>
+            <th>E-mail</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+</div>
+
+    
+    <script>
+        function savedata(){
+        var  name=document.getElementById("name").value;
+        var age= document.getElementById("age").value;
+        var gender= document.getElementById("gender").value;
+        var dob= document.getElementById("dob").value;
+        var course= document.getElementById("course").value;
+        var email=document.getElementById("email").value;
+
+        var table=document.getElementById("studentdata").getElementsByTagName("tbody")[0];
+        var newrow=table.insertRow(-1);
+        var cells=[name,age,gender,dob,course,email,'<button onclick="deleterow(this)">Delete</button>'];
+
+        for (var i=0;i<cells.length;i++){
+            var cell=newrow.insertCell(i);
+            cell.innerHTML=cells[i];
+        }
+        }
+
+
+        function deleterow(btn){
+            var row=btn.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+
+    </script>
+
+</body>
+</html>
