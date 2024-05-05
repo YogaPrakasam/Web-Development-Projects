@@ -1,0 +1,30 @@
+body{
+    background-color: darkgray;
+}
+.overall{
+    margin-left: 470px;
+    /* margin-top: 50px; */
+    border: solid 20px color black;
+    background-color: aquamarine;
+    margin-right: 500px;
+    padding: 20px;  
+}
+H2,h1{
+    text-align: center;
+}
+#studentdata{
+    text-align: center;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th,td{
+    border: 1px solid brown;
+    padding:5px;
+    text-align: center;
+}
+.datas{
+    background-color: darksalmon;
+    
+}
