@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextRepeater</title>
+</head>
+<body>
+     <button onclick="update()" id="btn">Update</button>
+    <div id="result"></div>
+
+    <script> 
+        var result=document.getElementById("result")
+        function update(){
+        var list=document.createElement("h1")
+        list.textContent="This is my new page using JS"
+        result.append(list)
+        }
+    </script>
+    <style>
+        *{
+            background-color: mediumspringgreen;
+        }
+        #btn{
+            /* margin: 300px; */
+            padding: 20px;
+            margin-left: 600px;
+            margin-top: 150px;
+            background-color: goldenrod;
+            font-size: medium;
+        }
+       #result{
+        padding: 20px;
+            margin-left: 420px;
+
+       }
+    </style>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 200px;
+            background-color: blueviolet;
+        }
+        #inputbox{
+            padding: 20px;
+            font-size: 18px;
+        }
+        #btn{
+            font-size: 18px;
+        }
+        #btn:hover{
+            background-color: lightpink;
+        }
+    </style>
+    <input type="text" id="inputbox" placeholder="Enter your text" size="20" maxlength="100">
+    <h1 id="result"></h1>
+    <button onclick="btn()" id="btn">click</button>
+
+
+    <script>
+         var inputbox=document.getElementById("inputbox")
+         var result=document.getElementById("result")
+         function btn()
+         {
+            result.textContent=inputbox.value
+         }
+
+
+         
+    </script>
+</body>
+</html>
